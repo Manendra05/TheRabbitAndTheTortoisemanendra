@@ -16,8 +16,7 @@ public class Rabbit implements Runnable {
         return rabbit;
     }
 
-    @Override
-    public void run() {
+    public void run () {
         for (int index = 0; index < MILESTONES; index++) {
             switch (index) {
                 case 0:
@@ -43,15 +42,15 @@ public class Rabbit implements Runnable {
                     break;
             }
             try {
-                Thread.sleep(1500L);
+                Thread.sleep(3000L);
             } catch (InterruptedException e) {
                 System.err.println("The rabbit has lost the path!");
             }
         }
         JOptionPane.showConfirmDialog(
                 null,
-                "The Rabbit has completed the race!",
-                "Rabbit",
+                "The Tortoise has completed the race!",
+                "Tortoise ",
                 JOptionPane.OK_CANCEL_OPTION
         );
     }
